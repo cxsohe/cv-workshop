@@ -82,7 +82,9 @@ Utfør følgende oppgaver:
     3. Returnere de filtrerte brukerne som har _minst_ en ønsket ferdighet.
     
     _HINT_: Bruk LINQ-uttrykk for å prosessere lista.
-3. _Bonusoppgave som kan og bør gjøres før steg 2_: Hva med testing? Hvordan vet vi at strengen parseres korrekt? Skriv enhetstester for _ParseUserSkills_. Eksempelvis skal input
+
+     For de spesielt interesserte: [artikkel om funksjonell programmering i C#](https://www.milanjovanovic.tech/blog/functional-programming-in-csharp-the-practical-parts), + [enda en artikkel](https://matrixtrak.com/an-introduction-to-functional-programming-with-c-a-dive-into-the-paradigm-shift/). 
+4. _Bonusoppgave som kan og bør gjøres før steg 2_: Hva med testing? Hvordan vet vi at strengen parseres korrekt? Skriv enhetstester for _ParseUserSkills_. Eksempelvis skal input
    ``` "React;Kotlin;CSS;" ``` gi følgende output
    ```c#
    [Skill(Technology: "React"), Skill(Technology: "Kotlin"), Skill(Technology: "CSS")] // type: IEnumerable<Skill>
