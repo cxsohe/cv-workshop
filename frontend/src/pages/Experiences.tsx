@@ -11,7 +11,7 @@ export default function Experiences() {
     null
   );
 
-  // TODO Oppgave 1.1 of 1.2: Håndter loading og error av erfaringer
+  // TODO Oppgave 2.1 og 2.2: Håndter loading og error av erfaringer
   const { data: experiences } = useExperiences();
 
   if (!experiences || experiences.length === 0) {
