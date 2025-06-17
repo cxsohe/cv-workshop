@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./Experiences.module.css";
 import { CxOption, CxSelect } from "@computas/designsystem/select/react";
-
 import { experienceTypeMap } from "../types/experienceTypes";
 import { useExperiences } from "../hooks/useExperiences";
 
