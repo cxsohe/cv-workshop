@@ -153,7 +153,7 @@ Våre erfaringer kommer ferdig sortert, men gjerne prøv å bytte rekkefølgen p
 Vi skal nå legge til filtrering av erfaringer etter type. Dette kan gjøres via å lagre en state med valgte type. Vi skal derfor bruke `useState`.
 
 1. Som dere kanskje ser, så funker ikke filtrering akkurat nå. Det er fordi staten `selectedExperience` aldri blir oppdatert. cxSelect-komponenten har en `handleSelectChange` funksjon som console.loger valgte type. Oppdater funksjonen `handleSelectChange` så staten endres når man velger type i selecten.
-2. Endre mappingen av erfaringen slik at den bruker filteredExperiences() istedenfor experiences.
+2. Endre mappingen av erfaringen slik at den bruker filteredExperiences() istedenfor experiences. NB: husk å fjerne kommenteringen av filteredExperiences()
 <details>
 <summary>Vis løsning</summary>
 
