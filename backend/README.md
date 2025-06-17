@@ -21,7 +21,7 @@
 1. For å finne denne koden senere, kjør `dotnet user-secrets list`.
 1. Kjør `dotnet run`
 Nå kjører backenden på port 5007.
-1. Gå til `http://localhost:5007/swagger` i nettleseren din, og sørg for at Swagger dukker opp.
+1. Gå til `http://localhost:5007/` i nettleseren din, og sørg for at Swagger dukker opp.
 1. Til senere: Når frontenden er satt opp og kjører, sørg for at AllowedCorsOrigins i appsettings.json inneholder de url-ene som skal få lov til å hente data fra backenden, samt porten der frontenden kjører lokalt (Dette skal være http://localhost:5173)
 
 # Kontekst for backend
