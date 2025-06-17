@@ -16,7 +16,7 @@
 ### Fork repoet
 
 Fork dette repoet til din egen GitHub-konto (samme hvilken).
-Eventuelt opprett en GitHub-konto hvis du ikke har en fra før.
+Eventuelt opprett en GitHub-konto hvis du ikke har en fra før. 
 
 ### Lag en Azure-konto
 
