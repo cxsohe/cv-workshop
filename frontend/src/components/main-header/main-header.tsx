@@ -7,7 +7,7 @@ export default function MainHeader() {
     <>
       <MainHeaderBackground />
       <header className={classes.header}>
-        <h1 className={classes.title}>Espen Askeladd sin CV</h1>
+        <h1 className={classes.title}>Solveig Malling Heitmann sin CV</h1>
         <div className={classes.nav}>
           <NavLink
             to="/"
