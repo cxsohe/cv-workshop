@@ -45,9 +45,16 @@ public static class ExperienceEndpoints
                 "/experiences/type/{type}",
                 async (string type, ICvService cvService) =>
                 {
-                    // TODO: Oppgave 3
+                    // Oppgave 3
+                    var experiencesByType = await cvService.GetExperiencesByTypeAsync(type);
+                    if (!experiencesByType.Any())
+                    {
+                        return Results.NotFound("There exists no experiences of this type");
+                    }
 
-                    return Results.Ok();
+                    var experiencesByTypeDtos = experiencesByType.Select(u => u.ToDto()).ToList();
+
+                    return Results.Ok(experiencesByTypeDtos);
                 }
             )
             .WithName("GetExperiencesByType")

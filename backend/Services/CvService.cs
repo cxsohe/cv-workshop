@@ -12,7 +12,7 @@ public class CvService(AppDbContext context) : ICvService
         return await context.Users.OrderBy(u => u.Name).ToListAsync();
     }
 
-    // TODO: Oppgave 1
+    // Oppgave 1
     public async Task<User?> GetUserByIdAsync(Guid id)
     {
         return await context.Users.FindAsync(id);
@@ -20,21 +20,20 @@ public class CvService(AppDbContext context) : ICvService
 
     public async Task<IEnumerable<Experience>> GetAllExperiencesAsync()
     {
-        // TODO: Oppgave 2
-        return await context.Experiences.OrderBy(u => u.Title).ToListAsync();;
+        // Oppgave 2
+        return await context.Experiences.OrderBy(u => u.Title).ToListAsync();
     }
 
     public async Task<Experience?> GetExperienceByIdAsync(Guid id)
     {
-        // TODO: Oppgave 2
+        // Oppgave 2
         return await context.Experiences.FindAsync(id);
     }
 
-    public async Task<IEnumerable<Experience>> GetExperiencesByTypeAsync(string type)
+    public async Task<IEnumerable<Experience?>> GetExperiencesByTypeAsync(string type)
     {
-        // TODO: Oppgave 3
-
-        return [];
+        // Oppgave 3
+        return await context.Experiences.Where(experience => experience.Type == type).ToListAsync();
     }
 
     // TODO: Oppgave 4 ny metode (husk å legge den til i interfacet)
