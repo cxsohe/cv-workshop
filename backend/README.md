@@ -90,6 +90,15 @@ Utfør følgende oppgaver:
    [Skill(Technology: "React"), Skill(Technology: "Kotlin"), Skill(Technology: "CSS")] // type: IEnumerable<Skill>
    ```
 
-   Dette er en fin mulighet for å teste ut TDD også. Spør gjerne en av veilederne for en lynintro, evt. sjekk dette [blogginnlegget](https://martinfowler.com/bliki/TestDrivenDevelopment.html) fra Martin Fowler for en kort introduksjon! TL;DR: test før implementasjon, sørg for at testen feiler, implementer metoden, testen består, refaktorer.
+   Dette er en fin mulighet for å teste ut TDD (test-driven development) også. Spør gjerne en av veilederne for en lynintro, evt. sjekk dette [blogginnlegget](https://martinfowler.com/bliki/TestDrivenDevelopment.html) fra Martin Fowler for en kort introduksjon! TL;DR: test før implementasjon, sørg for at testen feiler, implementer metoden, testen består, refaktorer.
+
+## Bonusoppgave: Oppgave 5
+
+Du har kanskje sett at Experience inneholder en User-ID som kan benyttes til å koble opp en gitt bruker med et sett av erfaringer. Denne koblingen finnes ikke ennå, og det er din jobb å opprette denne. Denne oppgaven er mer åpen, og du står fritt frem til å velge tilnærming, basert på tidligere oppgaver. Det står derfor ingen TODO-s i koden som ber deg gjøre noe. Dette er en fin oppgave som kan egne seg til å prøve TDD. 
+
+_HINT_: Her er et forslag til fremgangsmåte: 
+1. Utvid UserEndpoints med et nytt GET-endepunkt på pathen "/users/{id}/experiences"
+2. Utvid CV-service med en metode som enten henter riktig bruker og alle erfaringer, og mapper disse riktig mellom seg. Her er du nok nødt til å utvide UserDto-en samt oppdatere UserMapperen for å sørge for at erfaringene blir med.
+3. Test i Swagger eller ved å utføre TDD: 
 
 
