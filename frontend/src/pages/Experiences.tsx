@@ -10,9 +10,16 @@ export default function Experiences() {
   //const [selectedExperience, setSelectedExperience] = useState<string | null>(
     //null
   //);
+  
+  const { data: experiences, isLoading, error } = useExperiences();
 
-  // TODO Oppgave 1.1 of 1.2: Håndter loading og error av erfaringer
-  const { data: experiences } = useExperiences();
+  if (isLoading) {
+    return <p className="loading">Dataen lastes inn...</p>;
+  }
+
+  if (error) {
+    return <p className="error">En feil har oppstått</p>;
+  }
 
   if (!experiences || experiences.length === 0) {
     return <div className={styles.noExperiences}>No experiences found.</div>;
