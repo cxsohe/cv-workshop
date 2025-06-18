@@ -25,6 +25,22 @@ public static class UserEndpoints
 
         // GET /users/{id}
         // TODO: Oppgave 1: skriv et endepunkt for å hente ut riktig bruker
+        app.MapGet(
+                "/users/{id}",
+                async (ICvService cvService, Guid id) =>
+                {
+                    var user = await cvService.GetUserByIdAsync(id);
+                    if (user == null)
+                    {
+                        return Results.NotFound("The user does not exist");
+                    }
+                    var userDtos = user.ToDto();
+
+                    return Results.Ok(user);
+                }
+            )
+            .WithName("GetUserById")
+            .WithTags("User");
 
         // Retrieve all cvs that include any of the wanted skills
         app.MapPost(
