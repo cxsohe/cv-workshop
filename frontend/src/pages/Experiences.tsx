@@ -11,8 +11,6 @@ export default function Experiences() {
     null
   );
 
-
-  // TODO Oppgave 2.1 of 2.2: Håndter loading og error av erfaringer
   const { data: experiences, isLoading: isExperiencesLoading, error: experiencesError} = useExperiences();
 
 
@@ -74,8 +72,7 @@ export default function Experiences() {
           </label>
         </div>
         <div className={styles.experiences}>
-          {/*TODO Oppgave 3.1: Vis alle erfaringene*/}
-          {experiences.map(e => <div className={styles.container}><ExperienceCard key={e.id} experience={e} /></div>)}
+          {experiences.map((experience) => <ExperienceCard key={experience.id} experience={experience}/>)}
 
           {/* TODO Oppgave 4.1: Sorter erfaringene*/}
         </div>
