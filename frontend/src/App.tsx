@@ -12,7 +12,8 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/expreiences" element={<Experiences />} />
+            {/*TODO Oppgave 1.1: Legg til en ny route i App.tsx for Erfaringer*/}
+            <Route path="/experiences" element={<Experiences />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

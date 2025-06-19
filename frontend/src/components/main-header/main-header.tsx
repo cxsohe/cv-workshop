@@ -19,8 +19,10 @@ export default function MainHeader() {
             Om meg
           </NavLink>
 
-          <NavLink
-            to="/expreiences"
+          {/*TODO Oppgave 1.2: Legg til Erfaringer i `MainHeader.tsx` som en ny tab */}
+
+        <NavLink
+            to="/experiences"
             className={({ isActive }) =>
               isActive ? "cx-tab cx-tab--active" : "cx-tab"
             }
