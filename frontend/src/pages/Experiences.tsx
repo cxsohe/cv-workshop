@@ -72,7 +72,7 @@ export default function Experiences() {
           </label>
         </div>
         <div className={styles.experiences}>
-          {experiences.map((experience) => <ExperienceCard key={experience.id} experience={experience}/>)}
+          {experiences.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()).map((experience) => <ExperienceCard key={experience.id} experience={experience}/>)}
 
           {/* TODO Oppgave 4.1: Sorter erfaringene*/}
         </div>
