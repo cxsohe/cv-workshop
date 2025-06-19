@@ -3,6 +3,7 @@ import styles from "./Experiences.module.css";
 import { CxOption, CxSelect } from "@computas/designsystem/select/react";
 import { experienceTypeMap } from "../types/experienceTypes";
 import { useExperiences } from "../hooks/useExperiences";
+import { ExperienceCard } from "../components/experiences/ExperienceCard";
 
 export default function Experiences() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
