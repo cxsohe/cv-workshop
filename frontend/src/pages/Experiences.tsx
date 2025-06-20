@@ -22,26 +22,26 @@ export default function Experiences() {
     const customEvent = e as CustomEvent;
     const selectedFilter = customEvent.detail.value;
     console.log(selectedFilter);
-    // TODO Oppgave 5.1: Filtrer experiences etter type
+    _setSelectedExperience(selectedFilter);
   };
 
-  // const filteredExperiences = () => {
-  //   const validTypes = Object.keys(experienceTypeMap).filter(
-  //     (type) => type !== "other"
-  //   );
+  const filteredExperiences = () => {
+    const validTypes = Object.keys(experienceTypeMap).filter(
+      (type) => type !== "other"
+    );
 
-  //   if (selectedExperience === "other") {
-  //     return experiences.filter(
-  //       (experience) => !validTypes.includes(experience.type.toLowerCase())
-  //     );
-  //   } else if (selectedExperience) {
-  //     return experiences.filter(
-  //       (experience) =>
-  //         experience.type.toLowerCase() === selectedExperience.toLowerCase()
-  //     );
-  //   }
-  //   return experiences;
-  // };
+    if (_selectedExperience === "other") {
+      return experiences.filter(
+        (experience) => !validTypes.includes(experience.type.toLowerCase())
+      );
+    } else if (_selectedExperience) {
+      return experiences.filter(
+        (experience) =>
+          experience.type.toLowerCase() === _selectedExperience.toLowerCase()
+      );
+    }
+    return experiences;
+  };
 
   if(isExperiencesLoading) {
     return (
@@ -72,13 +72,9 @@ export default function Experiences() {
           </label>
         </div>
         <div className={styles.experiences}>
-          {experiences.sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()).map((experience) => <ExperienceCard key={experience.id} experience={experience}/>)}
-
-          {/* TODO Oppgave 4.1: Sorter erfaringene*/}
+          {filteredExperiences().sort((a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()).map((experience) => <ExperienceCard key={experience.id} experience={experience}/>)}
         </div>
       </div>
     );
   }
-
-
 }
